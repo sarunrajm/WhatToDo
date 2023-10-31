@@ -1,67 +1,92 @@
-/* ==========================================
-    FOR DEMO PURPOSE
-  ========================================== */
-  .holder {
-    background: #f0efe9;
-    min-height: 100vh;
-  }
-  .display-4{
-    font-family: 'Julius Sans One', sans-serif;  }  
-  .rounded {
-    border-radius: 1rem !important;
-  }
-  
-  .text-gray {
-    color: #aaa;
-  }
-  .reset1{
-    margin-left: 300px;
-    margin-top: 100px;
-    padding: 10px 20px;
-    border: 1px solid blue;
-    border-radius: 5px;
-    background-color: white;
-    color: blue;
-  }
-  .add{
-    padding: 10px 20px;
-    border: 1px solid blue;
-    border-radius: 5px;
-    background-color: white;
-    color: blue;
-  }
-  
-  input:checked + label {
-    text-decoration:solid;
-    color: #bdadad;
-  }
-  
-  label {
-    cursor: pointer;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  .sh{
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  }
+/* Styles for the main container */
 
-
-  /* footer */
-form{
-  
+.holder {
+  background: linear-gradient(135deg, #2980b9, #2c3e50);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width:500px) {
-  .reset1{
-    margin-left: 100px;
-  }
-  .add{
-    margin-top: 10px;
-    
-  }
+/* Styles for the card */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: box-shadow 0.3s ease-in-out;
 }
-::-webkit-scrollbar{
-  width: 0px;
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the header */
+.display-4 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+/* Styles for the input field and buttons */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+}
+
+.add {
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.add:hover {
+  background: #2980b9;
+}
+
+.editbtn, .reset1 {
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.editbtn:hover, .reset1:hover {
+  background: #219654;
+}
+
+/* Styles for the task items */
+.form-check-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Styles for the delete button */
+.secondary {
+  background: #e74c3c;
+  transition: background 0.3s ease-in-out;
+}
+
+.secondary:hover {
+  background: #c0392b;
 }
